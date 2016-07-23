@@ -15,11 +15,11 @@ if [ $file_type != 'tree' ]; then
 	echo "$sha " && git cat-file -p $sha
 	echo
 	echo "Add file to index?"
-	read answer
-	if [ $answer == 'y' ]; then
-		echo
-		echo "Input name:"
-		read name
+	read name
+	if [ $name != '-' ]; then
+		#echo
+		#echo "Input name:"
+		#read name
 		git update-index --add --cacheinfo 100644 $sha $name
 		git checkout -- $name
 		git add $name
