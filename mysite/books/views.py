@@ -40,12 +40,12 @@ def books_by_publisher(request, name):
 		
 	#Основная работа выполняется представлением object_list
 	#Результат выполнения Book.objects.filter(...)
-	#Будет доступен по переменной template_object_name (т.е. book_list)
+	#Будет доступен по переменной template_object_name (т.е. publisher_list)
 	return list_detail.object_list(
 	request,
 	queryset = Book.objects.filter(publisher=publisher),
 	template_name = 'books_by_publisher.html',
-	template_object_name = 'book',
+	template_object_name = 'publisher',
 	#В extra_context передается дополнительная информация,
 	#в данном случае об издательстве
 	extra_context = {'publisher': publisher}
