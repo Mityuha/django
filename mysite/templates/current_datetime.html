@@ -1,15 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html lang="ru">
-<head>
-<title>{% block title %}{% endblock %}</title>
-</head>
-<body>
-<h1>Мой сайт точного времени.</h1>
-{% block content %}{% endblock %}
-{% block footer %}
-<hr>
-<p>Спасибо за то, что посетили мой сайт.</p>
+{% extends "hour_base.html" %}
+{% block title %}Текущее время{% endblock %}
+{% block content %}
+<p>Сейчас {{ current_date }}.</p>
 {% endblock %}
-</body>
-</html>
-

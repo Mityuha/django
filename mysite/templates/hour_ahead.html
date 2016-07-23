@@ -1,0 +1,10 @@
+{% extends "hour_base.html" %}
+{% block title %}Время в будущем{% endblock %}
+{% block content %}
+<p>Через {{ hour_offset }} часов будет {{ next_time }}.</p>
+{% endblock %}
+{% block footer %}
+<p>Но точное время {{ current_datetime }}.</p>
+{{ block.super }}
+{% endblock %}
+
