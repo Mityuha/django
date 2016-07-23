@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>Поиск</title>
+</head>
+<body>
+{% for error in errors %}
+<p style="color : red ;">{{ error }}<p>
+{% endfor %}
+<!Отправить форму на текущую страницу URL (acttion="")>
+<form action="" method="get">
+<input type="text" name="q">
+<input type="submit" value="Найти">
+</form>
+</body>
+</html>
